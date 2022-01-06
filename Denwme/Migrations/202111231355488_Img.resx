@@ -117,11 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="red" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Target" xml:space="preserve">
+    <value>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</value>
   </data>
-  <data name="1549949228_2019-02-12_042824" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1549949228_2019-02-12_042824.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DefaultSchema" xml:space="preserve">
+    <value>dbo</value>
   </data>
 </root>

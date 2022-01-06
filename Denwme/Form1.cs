@@ -20,52 +20,34 @@ namespace Denwme
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            using (var context=new AdalaContext())
-            {
-                dgwWord.DataSource = context.Word.Select(p=> new 
-                {
-                    p.Name, 
-                    p.Meaning
-                }).ToList();
-                dgwSentence.DataSource= context.Sentence.Select(p=> new 
-                {
-                    p.Sentences,
-                    p.Meaning
-                }).ToList();
-                dgwSynonmys.DataSource = context.Synonmys.Select(p=> new
-                {
-                    p.Name,
-                    p.Meaning
-                }).ToList();
-            }
+            
         }
 
-        private void tbxWord_TextChanged(object sender, EventArgs e)
+
+        private void btnFind_Click_1(object sender, EventArgs e)
         {
             using (var context=new AdalaContext())
             {
-                dgwWord.DataSource = context.Word.Where(p => p.Name.Contains(tbxWord.Text)).Select(p=> new 
+                var entity = context.Words.Where(w => w.Name.Contains(tbxWord.Text)).Select(w => w.Name).FirstOrDefault();
+                if (entity!=null && entity.ToLower() == tbxWord.Text.ToLower())
                 {
-                    p.Name,
-                    p.Meaning
-                }).ToList();
-                dgwSentence.DataSource = context.Sentence.Include(p=>p.Word).Where(p => p.Word.Name.Contains(tbxWord.Text)).Select(p=> new 
-                {
-                    p.Sentences,
-                    p.Meaning
-                }).ToList();
-                dgwSynonmys.DataSource = context.Synonmys.Include(p=>p.Word).Where(p=>p.Word.Name.Contains(tbxWord.Text)).Select(p=> new
-                {
-                    p.Name,
-                    p.Meaning
-                }).ToList();
-              
+                    WordModel._wordText = entity.ToString();
+                    var child = new Child();
+                    child.Show();
+                    tbxWord.Clear();
+                }
+                else if(entity==null)
+                    MessageBox.Show("Girdiğiniz Kelime Bulunmamaktadır!");
+                else 
+                    MessageBox.Show("Lütfen Bir Kelime Giriniz!");
+
             }
         }
 
-        private void dgwWord_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            tbxWord.Text = dgwWord.CurrentRow.Cells[1].Value.ToString();
+            var addForm=new AddForm();
+            addForm.Show(); 
         }
     }
 }

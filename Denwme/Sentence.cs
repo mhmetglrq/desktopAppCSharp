@@ -5,6 +5,7 @@
         public int Id { get; set; }
         public string Sentences { get; set; }
         public string Meaning { get; set; }
+        public int WordId { get; set; }
         public Word Word { get; set; }
     }
 }

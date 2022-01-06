@@ -14,8 +14,8 @@ namespace Denwme
         {
 
         }
-        public DbSet<Word> Word { get; set; }
+        public DbSet<Word> Words { get; set; }
         public DbSet<Synonmys> Synonmys { get; set; }
-        public DbSet<Sentence> Sentence { get; set; }
+        public DbSet<Sentence> Sentences { get; set; }
     }
 }

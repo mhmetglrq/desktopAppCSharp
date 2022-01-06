@@ -57,6 +57,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdalaContext.cs" />
+    <Compile Include="AddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForm.Designer.cs">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Child.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Child.Designer.cs">
+      <DependentUpon>Child.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,12 +83,37 @@
     <Compile Include="Migrations\202111211440114_InitialA.designer.cs">
       <DependentUpon>202111211440114_InitialA.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111231355488_Img.cs" />
+    <Compile Include="Migrations\202111231355488_Img.designer.cs">
+      <DependentUpon>202111231355488_Img.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112302346245_New.cs" />
+    <Compile Include="Migrations\202112302346245_New.designer.cs">
+      <DependentUpon>202112302346245_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112302350520_lale.cs" />
+    <Compile Include="Migrations\202112302350520_lale.designer.cs">
+      <DependentUpon>202112302350520_lale.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\SentenceUpdateModel .cs" />
+    <Compile Include="Model\SentenceAddModel.cs" />
+    <Compile Include="Model\SynonmysUpdateModel.cs" />
+    <Compile Include="Model\SynonmysAddModel.cs" />
+    <Compile Include="Model\WordAddModel.cs" />
+    <Compile Include="Model\WordUpdateModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sentence.cs" />
     <Compile Include="Synonmys.cs" />
     <Compile Include="Word.cs" />
+    <Compile Include="Model\WordModel.cs" />
+    <EmbeddedResource Include="AddForm.resx">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Child.resx">
+      <DependentUpon>Child.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +123,15 @@
     <EmbeddedResource Include="Migrations\202111211440114_InitialA.resx">
       <DependentUpon>202111211440114_InitialA.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111231355488_Img.resx">
+      <DependentUpon>202111231355488_Img.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112302346245_New.resx">
+      <DependentUpon>202112302346245_New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112302350520_lale.resx">
+      <DependentUpon>202112302350520_lale.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -94,6 +140,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -111,6 +158,14 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Img\a.png" />
+    <None Include="Resources\1549949228_2019-02-12_042824.jpg" />
+    <None Include="Resources\red.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
