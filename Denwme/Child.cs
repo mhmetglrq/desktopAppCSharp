@@ -52,15 +52,12 @@ namespace Denwme
         {
             using (var context=new AdalaContext())
             {
-                int wordId= context.Words.Where(w => w.Name.Contains(WordModel._wordText)).Select(w=>w.Id).FirstOrDefault();
-                int synonmysId=context.Synonmys.Where(w => w.Word.Name.Contains(WordModel._wordText)).Select(w => w.Id).FirstOrDefault();
-                int sentenceId = context.Sentences.Where(w => w.Word.Name.Contains(WordModel._wordText)).Select(w => w.Id).FirstOrDefault();
-                var synonmysEntity=context.Synonmys.Find(synonmysId);
-                var sentenceEntity=context.Sentences.Find(sentenceId);
-                var wordEntity = context.Words.Find(wordId);
-                context.Sentences.Remove(sentenceEntity);
-                context.Words.Remove(wordEntity);
-                context.Synonmys.Remove(synonmysEntity);
+                var word= context.Words.Where(w => w.Name.Contains(WordModel._wordText)).FirstOrDefault();
+                var synonmys=context.Synonmys.Where(w => w.Word.Name.Contains(WordModel._wordText)).FirstOrDefault();
+                var sentence = context.Sentences.Where(w => w.Word.Name.Contains(WordModel._wordText)).FirstOrDefault();
+                context.Sentences.Remove(sentence);
+                context.Words.Remove(word);
+                context.Synonmys.Remove(synonmys);
                 context.SaveChanges();
                 MessageBox.Show("Başarıyla Silindi!");
                 this.Close();

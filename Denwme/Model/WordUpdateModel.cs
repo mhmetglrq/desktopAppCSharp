@@ -8,8 +8,6 @@ namespace Denwme.Model
 {
     public class WordUpdateModel
     {
-        public string WordName { get; set; }
-        public string WordMeaning { get; set; }
         public static string _word;
     }
 }

@@ -73,7 +73,7 @@ namespace Denwme
             this.panel1.Controls.Add(this.tbxWord);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(289, 303);
+            this.panel1.Size = new System.Drawing.Size(290, 307);
             this.panel1.TabIndex = 2;
             // 
             // btnAdd
@@ -101,7 +101,7 @@ namespace Denwme
             this.lblField.AutoSize = true;
             this.lblField.Font = new System.Drawing.Font("Malgun Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblField.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.lblField.Location = new System.Drawing.Point(3, 129);
+            this.lblField.Location = new System.Drawing.Point(7, 130);
             this.lblField.Name = "lblField";
             this.lblField.Size = new System.Drawing.Size(278, 37);
             this.lblField.TabIndex = 3;
@@ -126,7 +126,7 @@ namespace Denwme
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(313, 327);
+            this.ClientSize = new System.Drawing.Size(314, 331);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Kelime Otomasyonu";
